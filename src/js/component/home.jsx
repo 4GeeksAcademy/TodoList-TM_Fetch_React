@@ -95,9 +95,12 @@ const Home = () => {
                 {tareas.map((elemento, id) => (
                     //utilizo el .label para traer lo que esta almacenado en el array de tareas actualizadas
                     <li key={id}>
-                        {id} - {elemento.label} - 
-                        <button onClick={() => borrar(id)}>x</button>
-                        
+                        <div>
+                        {elemento.label}
+                        <button  onClick={() => borrar(id)} style={{border: "none", backgroundColor: "black", color: "white" }}>
+                             <div><i class="fa-solid fa-trash"></i></div>
+                        </button>
+                        </div>
                     </li>
                 ))}
             </ul>
