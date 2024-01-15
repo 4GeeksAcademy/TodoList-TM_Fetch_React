@@ -42,7 +42,7 @@ body {
   height: 100%;
   
   font-size: 20px;
-  display: flex;
+  /* display: flex; */
   align-items: center;
   overflow-wrap: anywhere;
   }
