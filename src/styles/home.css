@@ -46,3 +46,16 @@ body {
   align-items: center;
   overflow-wrap: anywhere;
   }
+
+  .list-unstyled {
+    text-align: left;
+    padding-left: 70px;
+  }
+
+  li > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-right: 60px;
+}

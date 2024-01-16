@@ -64,9 +64,11 @@ const Home = () => {
 
     function manejoEnvio(e) {
         e.preventDefault()
-        const tareasActualizadas = [{ label: input, done: false }, ...tareas] // se agrega la tarea de acuerdo al formato de la api
-        setTareas(tareasActualizadas)
-        setInput("")
+        if (input.trim() !== ""){
+            const tareasActualizadas = [{ label: input, done: false }, ...tareas] // se agrega la tarea de acuerdo al formato de la api
+            setTareas(tareasActualizadas)
+            setInput("") // limpio el input
+        } // si el input esta vacio no hace nada   
     }
 
     function borrar(id) {
@@ -97,8 +99,8 @@ const Home = () => {
                     <li key={id}>
                         <div>
                         {elemento.label}
-                        <button  onClick={() => borrar(id)} style={{border: "none", backgroundColor: "black", color: "white" }}>
-                             <div><i class="fa-solid fa-trash"></i></div>
+                        <button  className="trash" onClick={() => borrar(id)} style={{border: "none", backgroundColor: "black", color: "white" }}>
+                             <div><i className="fa-solid fa-trash"></i></div>
                         </button>
                         </div>
                     </li>
